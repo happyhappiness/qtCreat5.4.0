@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>652</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>眼底图像拼接</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionZoom"/>
+   <addaction name="actionRotate"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionUp"/>
+   <addaction name="actionDowm"/>
+   <addaction name="actionDelete"/>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>652</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuCai">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>模式</string>
+    </property>
+    <addaction name="actionZoom"/>
+    <addaction name="actionRotate"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionHelp"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+    <addaction name="actionUp"/>
+    <addaction name="actionDowm"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionDelete"/>
+   </widget>
+   <addaction name="menuCai"/>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/open</normaloff>:/tool/open</iconset>
+   </property>
+   <property name="text">
+    <string>打开图片</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/close</normaloff>:/tool/close</iconset>
+   </property>
+   <property name="text">
+    <string>保存图片</string>
+   </property>
+   <property name="toolTip">
+    <string>保存图片</string>
+   </property>
+  </action>
+  <action name="actionZoom">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/zoom</normaloff>:/tool/zoom</iconset>
+   </property>
+   <property name="text">
+    <string>放缩模式</string>
+   </property>
+  </action>
+  <action name="actionRotate">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/rotate</normaloff>:/tool/rotate</iconset>
+   </property>
+   <property name="text">
+    <string>旋转模式</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/help</normaloff>:/tool/help</iconset>
+   </property>
+   <property name="text">
+    <string>快捷键</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/quit</normaloff>:/tool/quit</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出系统</string>
+   </property>
+  </action>
+  <action name="actionUp">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/up</normaloff>:/tool/up</iconset>
+   </property>
+   <property name="text">
+    <string>向上一层</string>
+   </property>
+   <property name="toolTip">
+    <string>向上一层</string>
+   </property>
+   <property name="shortcut">
+    <string>Up</string>
+   </property>
+  </action>
+  <action name="actionDowm">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/down</normaloff>:/tool/down</iconset>
+   </property>
+   <property name="text">
+    <string>向下一层</string>
+   </property>
+   <property name="toolTip">
+    <string>向下一层</string>
+   </property>
+   <property name="shortcut">
+    <string>Down</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/cut</normaloff>:/tool/cut</iconset>
+   </property>
+   <property name="text">
+    <string>裁剪图片</string>
+   </property>
+   <property name="toolTip">
+    <string>裁剪定制</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="rsc.qrc">
+     <normaloff>:/tool/delete</normaloff>:/tool/delete</iconset>
+   </property>
+   <property name="text">
+    <string>删除图片</string>
+   </property>
+   <property name="toolTip">
+    <string>删除图片</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="rsc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
